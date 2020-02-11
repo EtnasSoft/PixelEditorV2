@@ -1,25 +1,56 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import {
+  HorizontalLayout,
+  VerticalLayout,
+  Panel,
+  Separator,
+  Spacer,
+  View
+} from "nice-react-layout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <View>
+    <VerticalLayout mockup className="layout">
+      <Panel fixed fixedHeight={50}>Header</Panel>
+      <Panel>
+        <HorizontalLayout mockup>
+          <Panel className="sidebar" proportion={1} sidebar customCss={{order: 1}}
+            collapsible
+            collapseButtonContent="<"
+            collapseButtonCollapsedContent=">"
+            collapseButtonStyle={{
+              background: "white",
+              border: "1px solid lightgray"
+            }}>
+            <p>Sidebar</p>
+          </Panel>
+          <Separator customCss={{order: 2}}/>
+          <Panel proportion={4} customCss={{order: 3}}>
+            <p>Main content</p>
+          </Panel>
+          <Separator customCss={{order: 4}}/>
+          <Panel className="sidebar" proportion={1} customCss={{order: 5}} sidebar
+            collapsible
+            collapseButtonContent=">"
+            collapseButtonCollapsedContent="<"
+            collapseButtonStyle={{
+              background: "white",
+              border: "1px solid lightgray"
+            }}>
+            <VerticalLayout mockup>
+              <Panel showSize customCss={{order: 1}}>Right 1</Panel>
+              <Panel showSize customCss={{order: 3}}>Right 2</Panel>
+              <Panel showSize customCss={{order: 5}}>Right 3</Panel>
+            </VerticalLayout>
+          </Panel>
+        </HorizontalLayout>
+      </Panel>
+      <Panel fixed fixedHeight={50}>Footer</Panel>
+    </VerticalLayout>
+    </View>
   );
 }
 
