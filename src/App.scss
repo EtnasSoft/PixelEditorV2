@@ -1,0 +1,43 @@
+// Main colors:
+$background: #26292C;
+$background2: #1C2022;
+$background3: #374140;
+$background4: #141618;
+$background5: #111518; // borders; backgroundLayer...
+
+// Layout colors:
+$headerBackground: $background2;
+$sidenavLeftBackground: $background5;
+$sidenavRightBackground: $background5;
+$mainContentBackground: $background;
+$footerBackground: $background2;
+
+.mainViewport {
+  .header {
+    background-color: $headerBackground;
+    border-bottom: 1px solid $background5;
+  }
+
+  .sidenavLeft {
+    background-color: $sidenavLeftBackground;
+    border-right: 1px solid $background5;
+  }
+
+  .sidenavRight {
+    background-color: $sidenavRightBackground;
+    border-left: 1px solid $background5;
+  }
+
+  .mainContent {
+    background-color: $headerBackground;
+  }
+
+  .footer {
+    background-color: $footerBackground;
+    border-top: 1px solid $background5;
+  }
+}
+
+.spaces-resize-handle {
+  background-color: #242A2B;
+}

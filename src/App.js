@@ -1,56 +1,23 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
-import {
-  HorizontalLayout,
-  VerticalLayout,
-  Panel,
-  Separator,
-  Spacer,
-  View
-} from "nice-react-layout";
+import * as Space from 'react-spaces';
 
 function App() {
   return (
-    <View>
-    <VerticalLayout mockup className="layout">
-      <Panel fixed fixedHeight={50}>Header</Panel>
-      <Panel>
-        <HorizontalLayout mockup>
-          <Panel className="sidebar" proportion={1} sidebar customCss={{order: 1}}
-            collapsible
-            collapseButtonContent="<"
-            collapseButtonCollapsedContent=">"
-            collapseButtonStyle={{
-              background: "white",
-              border: "1px solid lightgray"
-            }}>
-            <p>Sidebar</p>
-          </Panel>
-          <Separator customCss={{order: 2}}/>
-          <Panel proportion={4} customCss={{order: 3}}>
-            <p>Main content</p>
-          </Panel>
-          <Separator customCss={{order: 4}}/>
-          <Panel className="sidebar" proportion={1} customCss={{order: 5}} sidebar
-            collapsible
-            collapseButtonContent=">"
-            collapseButtonCollapsedContent="<"
-            collapseButtonStyle={{
-              background: "white",
-              border: "1px solid lightgray"
-            }}>
-            <VerticalLayout mockup>
-              <Panel showSize customCss={{order: 1}}>Right 1</Panel>
-              <Panel showSize customCss={{order: 3}}>Right 2</Panel>
-              <Panel showSize customCss={{order: 5}}>Right 3</Panel>
-            </VerticalLayout>
-          </Panel>
-        </HorizontalLayout>
-      </Panel>
-      <Panel fixed fixedHeight={50}>Footer</Panel>
-    </VerticalLayout>
-    </View>
+    <Space.ViewPort className="mainViewport">
+      <Space.Top size="48px" className="header" />
+      <Space.Fill>
+        <Space.LeftResizable size="20%" className="sidenavLeft" />
+        <Space.Fill className="mainContent" />
+        <Space.RightResizable size="20%" className="sidenavRight">
+          <Space.TopResizable size="25%" style={{'backgroundColor': '#111518'}} />
+          <Space.Fill style={{'backgroundColor': '#111518'}} />
+          <Space.BottomResizable size="25%" style={{'backgroundColor': '#111518'}} />
+        </Space.RightResizable>
+      </Space.Fill>
+      <Space.Bottom size="22px" className="footer" />
+    </Space.ViewPort>
   );
 }
 
