@@ -1,15 +1,17 @@
 // Main colors:
-$background: #26292C;
-$background2: #1C2022;
-$background3: #374140;
+$background: #25282C;
+$background2: #1D1F22;
+$background3: #171719;
 $background4: #141618;
 $background5: #111518; // borders; backgroundLayer...
 
 // Layout colors:
 $headerBackground: $background2;
+$toolsBarBackground: $background;
+$sidenavToolsBackground: $background;
 $sidenavLeftBackground: $background5;
 $sidenavRightBackground: $background5;
-$mainContentBackground: $background;
+$workspaceBackground: $background3;
 $footerBackground: $background2;
 
 .mainViewport {
@@ -18,18 +20,31 @@ $footerBackground: $background2;
     border-bottom: 1px solid $background5;
   }
 
-  .sidenavLeft {
-    background-color: $sidenavLeftBackground;
-    border-right: 1px solid $background5;
+  .tools__bar {
+    background-color: $toolsBarBackground;
+    border-bottom: 1px solid $background5;
   }
 
-  .sidenavRight {
-    background-color: $sidenavRightBackground;
-    border-left: 1px solid $background5;
+  .sidenav {
+    &.sidenav__tools {
+      background-color: $sidenavToolsBackground;
+      border-bottom: 1px solid $background5;
+    }
+
+    &.sidenav__left {
+      background-color: $sidenavLeftBackground;
+      border-right: 1px solid $background5;
+    }
+
+    &.sidenav__right {
+      background-color: $sidenavRightBackground;
+      border-left: 1px solid $background5;
+    }
   }
 
-  .mainContent {
-    background-color: $headerBackground;
+
+  .workspace {
+    background-color: $workspaceBackground;
   }
 
   .footer {
@@ -40,4 +55,5 @@ $footerBackground: $background2;
 
 .spaces-resize-handle {
   background-color: #242A2B;
+  //background: url(styles/images/bg-hash.svg) 0 0;
 }
