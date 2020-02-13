@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import {Menu} from 'semantic-ui-react'
 
-// como meto imagenes???!
-import arrange from '../styles/images/icons/arrange.svg';
+import logo from '../styles/images/logo.png';
 
 export default class headerMenu extends Component {
   state = {};
@@ -15,31 +14,49 @@ export default class headerMenu extends Component {
     return (
         <Menu stackable>
           <Menu.Item>
-            <img src={arrange} alt="test" />
+            <img src={logo} alt="PixelEditor"/>
           </Menu.Item>
 
           <Menu.Item
-              name='features'
-              active={activeItem === 'features'}
-              onClick={this.handleItemClick}
-          >
-            Features
+              name='File'
+              active={activeItem === 'File'}
+              onClick={this.handleItemClick}>
+            File
           </Menu.Item>
 
           <Menu.Item
-              name='testimonials'
-              active={activeItem === 'testimonials'}
-              onClick={this.handleItemClick}
-          >
-            Testimonials
+              name='Edit'
+              active={activeItem === 'Edit'}
+              onClick={this.handleItemClick}>
+            Edit
           </Menu.Item>
 
           <Menu.Item
-              name='sign-in'
-              active={activeItem === 'sign-in'}
-              onClick={this.handleItemClick}
-          >
-            Sign-in
+              name='Image'
+              active={activeItem === 'Image'}
+              onClick={this.handleItemClick}>
+            Image
+          </Menu.Item>
+
+          <Menu.Item
+              name='Adjustment'
+              active={activeItem === 'Adjustment'}
+              onClick={this.handleItemClick}>
+            Adjustment
+          </Menu.Item>
+
+          <Menu.Item
+              name='View'
+              active={activeItem === 'View'}
+              onClick={this.handleItemClick}>
+            View
+          </Menu.Item>
+
+          <Menu.Item
+              name='Help'
+              active={activeItem === 'Help'}
+              onClick={this.handleItemClick}>
+            Help
           </Menu.Item>
         </Menu>
     )

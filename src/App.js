@@ -9,13 +9,15 @@ function App() {
   return (
     <Space.ViewPort className="mainViewport">
       <Space.Top size="35px" className="header" order={1} />
-      <Space.Top size="35px" className="tools__bar" order={2} />
+      <Space.Top size="35px" className="tools__bar" order={2}>
+        <Menu />
+      </Space.Top>
         <Space.Fill>
           <Space.LeftResizable size="50px" className="sidenav sidenav__tools">
             <SidebarTools />
           </Space.LeftResizable>
           <Space.Fill className="workspace">
-            <Menu />
+
           </Space.Fill>
 
           <Space.RightResizable size="20%" className="sidenav sidenav__right">
