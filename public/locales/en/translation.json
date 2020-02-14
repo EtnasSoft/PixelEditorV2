@@ -1,0 +1,32 @@
+{
+    "title": "Welcome to PixelEditor v2",
+    "HeaderMenu": {
+        "File": "File",
+        "New": "New",
+        "Open": "Open",
+        "Save": "Save",
+        "Rename": "Rename",
+        "MakeCopy": "Make a copy",
+        "DownloadAs": "Download as",
+        "Edit": "Edit",
+        "UndoRedo": "Undo / Redo",
+        "StepForward": "Step Forward",
+        "StepBackward": "Step Backward",
+        "Cut": "Cut",
+        "Copy": "Copy",
+        "CopyMerged": "Copy merged",
+        "Paste": "Paste",
+        "View": "View",
+        "ZoomIn": "Zoom In",
+        "ZoomOut": "Zoom Out",
+        "FitTheArea": "Fit the Area",
+        "PixelToPixel": "Pixel to Pixel",
+        "Language": "Language",
+        "Spanish": "Spanish",
+        "English": "English"
+    },
+    "description": {
+        "part1": "english",
+        "part2": "english 2"
+    }
+}

@@ -2,10 +2,19 @@ import React from 'react';
 import './App.scss';
 
 import * as Space from 'react-spaces';
-import Menu from './components/headerMenu';
-import SidebarTools from './components/sidebarTools';
+import Menu from './components/HeaderMenu';
+import SidebarTools from './components/SidebarTools';
+
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t } = useTranslation();
+  // console.info(t('title'));
+
+  /*const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };*/
+
   return (
     <Space.ViewPort className="mainViewport">
       <Space.Top size="35px" className="header" order={1} />
@@ -17,7 +26,7 @@ function App() {
             <SidebarTools />
           </Space.LeftResizable>
           <Space.Fill className="workspace">
-
+            <h1>{t('title')}</h1>
           </Space.Fill>
 
           <Space.RightResizable size="20%" className="sidenav sidenav__right">

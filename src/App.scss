@@ -23,6 +23,7 @@ $footerBackground: $background2;
   .tools__bar {
     background-color: $toolsBarBackground;
     border-bottom: 1px solid $background5;
+    overflow: visible;
   }
 
   .sidenav {
@@ -45,6 +46,7 @@ $footerBackground: $background2;
 
   .workspace {
     background-color: $workspaceBackground;
+    color: #fff;
   }
 
   .footer {
