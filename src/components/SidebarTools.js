@@ -2,12 +2,12 @@ import React, {Component} from 'react'
 import {Icon, Menu} from 'semantic-ui-react'
 
 export default class SidebarTools extends Component {
-  state = {activeItem: 'gamepad'}
+  state = { activeItem: 'gamepad' };
 
-  handleItemClick = (e, {name}) => this.setState({activeItem: name})
+  handleItemClick = (e, {name}) => this.setState({activeItem: name});
 
   render() {
-    const {activeItem} = this.state
+    const {activeItem} = this.state;
 
     return (
         <Menu icon vertical>

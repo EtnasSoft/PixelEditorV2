@@ -15,6 +15,7 @@ function HeaderMenu() {
           <Dropdown.Menu>
             <Dropdown.Item text={t('HeaderMenu.New')} />
             <Dropdown.Item text={t('HeaderMenu.Open')} description='Ctrl + O' />
+            <Dropdown.Item text={t('HeaderMenu.Save')} description='Ctrl + S' />
             <Dropdown.Item text={t('HeaderMenu.SaveAs')} description='Ctrl + A' />
             <Dropdown.Item text={t('HeaderMenu.Rename')} description='Ctrl + R' />
             <Dropdown.Item text={t('HeaderMenu.MakeCopy')} />

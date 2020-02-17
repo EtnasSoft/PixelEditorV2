@@ -18,12 +18,12 @@ $footerBackground: $background2;
   .header {
     background-color: $headerBackground;
     border-bottom: 1px solid $background5;
+    overflow: visible;
   }
 
   .tools__bar {
     background-color: $toolsBarBackground;
     border-bottom: 1px solid $background5;
-    overflow: visible;
   }
 
   .sidenav {
@@ -58,4 +58,44 @@ $footerBackground: $background2;
 .spaces-resize-handle {
   background-color: #242A2B;
   //background: url(styles/images/bg-hash.svg) 0 0;
+}
+
+.header {
+  .ui.menu {
+    background: transparent;
+
+    .item {
+      padding: 0 20px;
+    }
+  }
+
+  .ui.menu .dropdown.item {
+    color: #fff;
+
+    .menu {
+      min-width: 240px;
+      z-index: 99999;
+    }
+  }
+}
+
+.sidenav__tools {
+  .menu {
+    background: transparent;
+    color: #fff;
+  }
+}
+
+.footer {
+  color: #fff;
+}
+
+.canvas__area {
+  position: relative;
+
+  .editor__canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

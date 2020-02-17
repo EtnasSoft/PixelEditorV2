@@ -86,7 +86,7 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="SignupBackend">
+      <paths name="SignupBackend TEST">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
