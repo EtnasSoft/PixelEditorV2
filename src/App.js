@@ -3,6 +3,7 @@ import './App.scss';
 
 import * as Space from 'react-spaces';
 import Menu from './components/HeaderMenu';
+import HeaderToolbar from './components/HeaderToolbar';
 import SidebarTools from './components/SidebarTools';
 import Workspace from './components/Workspace';
 import Footer from './components/Footer';
@@ -23,10 +24,7 @@ function App() {
         <Menu />
       </Space.Top>
       <Space.Top size="35px" className="tools__bar" order={2}>
-        <div className="panel__control upload__control">
-          <label htmlFor="data__upload">Upload</label>
-          <input type="file" className="data__upload" id="data__upload" accept="*/*" />
-        </div>
+        <HeaderToolbar />
       </Space.Top>
         <Space.Fill>
           <Space.LeftResizable size="50px" className="sidenav sidenav__tools">

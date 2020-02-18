@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <section>
-      <p>Copyright @2020. EtnasSoft</p>
+      <p>{t('dummy.short')}</p>
     </section>
   );
 }

@@ -81,6 +81,7 @@ function edit_clockwize() {
 }
 
 function edit_half_turn() {
+  console.info( 'edit_half_turn!' );
   var mes = 'half turn';
   var flag = edit_confirm(mes);
 
@@ -234,4 +235,8 @@ function set_edit_alert() {
   } else {
     edit_alert = false;
   }
+}
+
+function set_view_hex() {
+  console.info( 'Set HEX view mode...' );
 }

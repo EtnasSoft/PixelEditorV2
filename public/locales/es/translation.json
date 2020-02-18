@@ -7,7 +7,16 @@
 
     "title": "Bienvenido a PixelEditor v2",
 
-    "HeaderMenu": {
+    "commons": {
+        "cancel": "Cancelar",
+        "undo": "Deshacer",
+        "redo": "Rehacer",
+        "edit": "Editar",
+        "download": "Descargar",
+        "apply": "Aplicar"
+    },
+
+    "headerMenu": {
         "File": "Fichero",
         "New": "Nuevo",
         "Open": "Abrir",
@@ -15,7 +24,7 @@
         "SaveAs": "Guardar como",
         "Rename":  "Renombrar",
         "MakeCopy": "Crear una copia",
-        "DownloadAs":  "Descargar",
+        "DownloadFile":  "Descargar",
         "Edit": "Editar",
         "UndoRedo":  "Undo / Redo",
         "StepForward": "Paso siguiente",
@@ -23,6 +32,7 @@
         "Cut": "Cortar",
         "Copy":  "Copiar",
         "CopyMerged": "Copiar y mezclar",
+        "Merge": "Mezclar",
         "Paste":  "Pegar",
         "View": "Ver",
         "ZoomIn":  "Zoom más",
@@ -32,6 +42,25 @@
         "Language":  "Lenguaje",
         "Spanish": "Español",
         "English":  "Inglés"
+    },
+
+    "headerToolbar": {
+        "sceneName": "Memo",
+        "sceneSize": "Scene size"
+    },
+
+    "sidebarTools": {
+        "editHalfTurn": "Medio giro",
+        "editClockwise": "Sentido horario",
+        "editCounterClockwise": "Anti sentido horario",
+        "editHorizontal": "Horizontal",
+        "editVertical": "Vertical",
+        "editInvert": "Invertir"
+    },
+
+    "editControls": {
+        "setModeToAlert": "None alert",
+        "setModeToHex": "View Hex Data"
     },
 
     "description": {

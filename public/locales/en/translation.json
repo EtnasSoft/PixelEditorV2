@@ -7,7 +7,16 @@
 
     "title": "Welcome to PixelEditor v2",
 
-    "HeaderMenu": {
+    "commons": {
+        "cancel": "Cancel",
+        "undo": "Undo",
+        "redo": "Redo",
+        "edit": "Edit",
+        "download": "Download",
+        "apply": "Aplicar"
+    },
+
+    "headerMenu": {
         "File": "File",
         "New": "New",
         "Open": "Open",
@@ -15,7 +24,7 @@
         "SaveAs": "Save as",
         "Rename": "Rename",
         "MakeCopy": "Make a copy",
-        "DownloadAs": "Download as",
+        "DownloadFile": "Download",
         "Edit": "Edit",
         "UndoRedo": "Undo / Redo",
         "StepForward": "Step Forward",
@@ -23,6 +32,7 @@
         "Cut": "Cut",
         "Copy": "Copy",
         "CopyMerged": "Copy merged",
+        "Merge": "Merge",
         "Paste": "Paste",
         "View": "View",
         "ZoomIn": "Zoom In",
@@ -33,6 +43,26 @@
         "Spanish": "Spanish",
         "English": "English"
     },
+
+    "headerToolbar": {
+        "sceneName": "Memo",
+        "sceneSize": "Scene size"
+    },
+
+    "sidebarTools": {
+        "editHalfTurn": "HalfTurn",
+        "editClockwise": "Clockwise",
+        "editCounterClockwise": "CounterClockwise",
+        "editHorizontal": "Horizontal",
+        "editVertical": "Vertical",
+        "editInvert": "Invert"
+    },
+
+    "editControls": {
+        "setModeToAlert": "None alert",
+        "setModeToHex": "View Hex Data"
+    },
+
     "description": {
         "part1": "english",
         "part2": "english 2"

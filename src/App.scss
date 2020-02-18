@@ -99,3 +99,13 @@ $footerBackground: $background2;
     left: 0;
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.offset {
+  position: absolute;
+  top: -100px;
+  left: -500px;
+}
