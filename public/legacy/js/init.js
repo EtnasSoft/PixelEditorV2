@@ -36,10 +36,18 @@ var undo_clipboard = new Array();
 var set_w = null;
 var set_b = null;
 var get_dy = null;
+
+
+// Canvas
+// --------------------------
 var editor = null;
 var ctx = null;
 var cursor = null;
 var c_ctx = null;
+var previewPanel = null;
+var previewPanel_ctx = null;
+
+
 var cur_info = new Array();
 var edit_mes = new Array();
 var edit_alert = null;
@@ -55,6 +63,7 @@ init_clip_data();
 
 /*
  * clipboard
+ * // CLIPBOARD ES LA VENTANA A LA DERECHA LARGA
  */
 function init_clip() {
   var max_x = (CLIP_PIXEL_SIZE * 8 + 1) * CLIP_MAX_X + 1;
@@ -166,9 +175,9 @@ function init_editor() {
     });
 
     //preview
-    ctx.fillStyle = EDITOR_B;
-    ctx.fillRect(EDITOR_PRE_X, EDITOR_PRE_Y, pre_max_x + 2, pre_max_y + 2);
-    set_editor_rect(EDITOR_PRE_X, EDITOR_PRE_Y, pre_max_x + 2, pre_max_y + 2, EDITOR_LINE);
+    printPreview(EDITOR_PRE_X, EDITOR_PRE_Y, pre_max_x, pre_max_y);
+    console.info( 'Coords PREVIEW: ', EDITOR_PRE_X, EDITOR_PRE_Y, pre_max_x + 2, pre_max_y + 2 );
+
 
     //editor
     ctx.fillStyle = EDITOR_B;
@@ -182,6 +191,16 @@ function init_editor() {
   });*/
 
   //$('#hx').css('top', EDITOR_MAX_Y);
+}
+
+function updatePreview(x, y, max_x, max_y, fillStyle) {
+  previewPanel_ctx.fillStyle = fillStyle;
+  previewPanel_ctx.fillRect(x, y, max_x + 2, max_y + 2);
+}
+
+function printPreview(x, y, max_x, max_y) {
+  updatePreview(x, y, max_x, max_y, EDITOR_B);
+  set_editor_rect(x, y, max_x + 2, max_y + 2, EDITOR_LINE, previewPanel_ctx); // BORDER PREVIEW
 }
 
 function init_editor_block(view_x, view_y, view_w, view_h, max_x, max_y) {

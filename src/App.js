@@ -7,6 +7,7 @@ import HeaderToolbar from './components/HeaderToolbar';
 import SidebarTools from './components/SidebarTools';
 import Workspace from './components/Workspace';
 import Footer from './components/Footer';
+import PreviewPanel from "./components/PreviewPanel";
 
 import { useTranslation } from 'react-i18next';
 
@@ -35,8 +36,12 @@ function App() {
           </Space.Fill>
 
           <Space.RightResizable size="20%" className="sidenav sidenav__right">
-            <Space.TopResizable size="25%" style={{'backgroundColor': '#111518'}} />
-            <Space.Fill style={{'backgroundColor': '#111518'}} />
+            <Space.TopResizable size="25%" style={{'backgroundColor': '#111518'}}>
+              <PreviewPanel />
+            </Space.TopResizable>
+            <Space.Fill style={{'backgroundColor': '#111518'}}>
+
+            </Space.Fill>
             <Space.BottomResizable size="25%" style={{'backgroundColor': '#111518'}} />
           </Space.RightResizable>
         </Space.Fill>

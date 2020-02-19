@@ -134,7 +134,16 @@ function set_bw(dx, dy, bw, mode) {
       ctx.fillStyle = EDITOR_B;
     }
     ctx.fillRect(dx * PIXEL_SIZE + 1, (dy * PIXEL_SIZE + 1) + EDITOR_MAIN_Y, PIXEL_SIZE - 1, PIXEL_SIZE - 1);
-    ctx.fillRect((dx * PRE_PIXEL_SIZE) + EDITOR_PRE_X + 1, (dy * PRE_PIXEL_SIZE) + EDITOR_PRE_Y + 1, PRE_PIXEL_SIZE, PRE_PIXEL_SIZE);
+
+    // Updating preview panel
+    updatePreview(
+      (dx * PRE_PIXEL_SIZE) + EDITOR_PRE_X + 1,
+      (dy * PRE_PIXEL_SIZE) + EDITOR_PRE_Y + 1,
+      PRE_PIXEL_SIZE,
+      PRE_PIXEL_SIZE,
+      ctx.fillStyle
+    );
+    //ctx.fillRect((dx * PRE_PIXEL_SIZE) + EDITOR_PRE_X + 1, (dy * PRE_PIXEL_SIZE) + EDITOR_PRE_Y + 1, PRE_PIXEL_SIZE, PRE_PIXEL_SIZE);
 
   } else {
     if (bw == 1) {
@@ -181,12 +190,13 @@ function set_editor_fillrect(x, y, w, h, color, alpha) {
   ctx.globalAlpha = 1.0;
 }
 
-function set_editor_rect(x, y, w, h, color) {
-  ctx.fillStyle = color;
-  ctx.fillRect(x, y, w, 1);
-  ctx.fillRect(x, y, 1, h);
-  ctx.fillRect(x + w, y, 1, h);
-  ctx.fillRect(x, y + h, w + 1, 1);
+function set_editor_rect(x, y, w, h, color, new_ctx) {
+  new_ctx || (new_ctx = ctx);
+  new_ctx.fillStyle = color;
+  new_ctx.fillRect(x, y, w, 1);
+  new_ctx.fillRect(x, y, 1, h);
+  new_ctx.fillRect(x + w, y, 1, h);
+  new_ctx.fillRect(x, y + h, w + 1, 1);
 }
 
 /*

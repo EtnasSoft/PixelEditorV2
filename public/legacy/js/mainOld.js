@@ -6,11 +6,14 @@ window.onload = function () {
   cursor = document.getElementById('cursor');
   c_ctx = cursor.getContext('2d');
 
+  previewPanel = document.getElementById('preview__canvas');
+  previewPanel_ctx = previewPanel.getContext('2d');
+
   console.info( 'Editor: ', editor );
   console.info( 'Cursor: ', cursor );
 
   init_editor();
-  init_clip();
+  init_clip(); // CLIPBOARD ES LA VENTANA A LA DERECHA LARGA
 
   merge_paste = false;
   edit_alert = true;

@@ -1,14 +1,14 @@
 import React from 'react'
 import {useTranslation} from "react-i18next";
 
-function Footer() {
+function PreviewPanel() {
   const { t } = useTranslation();
 
   return (
-    <section>
-      <p id="edit_info"/>
+    <section className="preview__panel">
+      <canvas id="preview__canvas" />
     </section>
   );
 }
 
-export default Footer;
+export default PreviewPanel;
